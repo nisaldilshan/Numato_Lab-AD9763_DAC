@@ -1,0 +1,42 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 17 17:44:45 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P129" LEVEL 1;
+COMP "dac_wrt1" LOCATE = SITE "P5" LEVEL 1;
+COMP "dac_clk1" LOCATE = SITE "P7" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P46" LEVEL 1;
+COMP "dac_wrt2" LOCATE = SITE "P3" LEVEL 1;
+COMP "dac_clk2" LOCATE = SITE "P8" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P47" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "P48" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P49" LEVEL 1;
+COMP "sel_n<0>" LOCATE = SITE "P64" LEVEL 1;
+COMP "sel_n<1>" LOCATE = SITE "P68" LEVEL 1;
+COMP "sel_n<2>" LOCATE = SITE "P69" LEVEL 1;
+COMP "sel_n<3>" LOCATE = SITE "P70" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P80" LEVEL 1;
+COMP "dac_c1<0>" LOCATE = SITE "P10" LEVEL 1;
+COMP "dac_c1<1>" LOCATE = SITE "P11" LEVEL 1;
+COMP "dac_c1<2>" LOCATE = SITE "P13" LEVEL 1;
+COMP "dac_c1<3>" LOCATE = SITE "P12" LEVEL 1;
+COMP "dac_c2<0>" LOCATE = SITE "P132" LEVEL 1;
+COMP "dac_c1<4>" LOCATE = SITE "P16" LEVEL 1;
+COMP "dac_c2<1>" LOCATE = SITE "P130" LEVEL 1;
+COMP "dac_c1<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "dac_c2<2>" LOCATE = SITE "P135" LEVEL 1;
+COMP "dac_c1<6>" LOCATE = SITE "P20" LEVEL 1;
+COMP "dac_c2<3>" LOCATE = SITE "P134" LEVEL 1;
+COMP "dac_c1<7>" LOCATE = SITE "P18" LEVEL 1;
+COMP "dac_c2<4>" LOCATE = SITE "P139" LEVEL 1;
+COMP "dac_c1<8>" LOCATE = SITE "P21" LEVEL 1;
+COMP "dac_c2<5>" LOCATE = SITE "P138" LEVEL 1;
+COMP "dac_c1<9>" LOCATE = SITE "P19" LEVEL 1;
+COMP "dac_c2<6>" LOCATE = SITE "P143" LEVEL 1;
+COMP "dac_c2<7>" LOCATE = SITE "P141" LEVEL 1;
+COMP "dac_c2<8>" LOCATE = SITE "P6" LEVEL 1;
+COMP "dac_c2<9>" LOCATE = SITE "P4" LEVEL 1;
+NET "dac_clk2_OBUF1" PERIOD = 83.3333333 ns HIGH 50%;
+SCHEMATIC END;
+

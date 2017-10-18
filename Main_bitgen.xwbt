@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\ise_projects\ElbertDACverilog\Main.ncd
+OUTFILE=F:\ise_projects\ElbertDACverilog\Main.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-4tq144
+WORKINGDIR=F:\ise_projects\ElbertDACverilog
+LICENSE=WebPack
+USER_INFO=176453893_200471044_210637353_003

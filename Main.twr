@@ -1,0 +1,502 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf -ucf
+constraints_file.ucf
+
+Design file:              Main.ncd
+Physical constraint file: Main.pcf
+Device,package,speed:     xc3s50a,tq144,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "dac_clk2_OBUF1" PERIOD = 83.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 225 paths analyzed, 44 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.439ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dac_c1_8 (SLICE_X12Y12.F1), 9 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     76.894ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_0 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.374ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_0 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.591   address<0>
+                                                       address_0
+    SLICE_X15Y12.F2      net (fanout=41)       2.110   address<0>
+    SLICE_X15Y12.X       Tilo                  0.643   N6
+                                                       dac_c1_mux0000<8>170_SW0
+    SLICE_X14Y13.G3      net (fanout=1)        0.044   N6
+    SLICE_X14Y13.Y       Tilo                  0.707   dac_c1_mux0000<8>224
+                                                       dac_c1_mux0000<8>170
+    SLICE_X14Y13.F3      net (fanout=1)        0.043   dac_c1_mux0000<8>170/O
+    SLICE_X14Y13.X       Tilo                  0.692   dac_c1_mux0000<8>224
+                                                       dac_c1_mux0000<8>224
+    SLICE_X12Y12.F1      net (fanout=1)        0.742   dac_c1_mux0000<8>224
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      6.374ns (3.435ns logic, 2.939ns route)
+                                                       (53.9% logic, 46.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.171ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_1 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      6.097ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_1 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.YQ      Tcko                  0.580   address<0>
+                                                       address_1
+    SLICE_X15Y12.F4      net (fanout=41)       1.844   address<1>
+    SLICE_X15Y12.X       Tilo                  0.643   N6
+                                                       dac_c1_mux0000<8>170_SW0
+    SLICE_X14Y13.G3      net (fanout=1)        0.044   N6
+    SLICE_X14Y13.Y       Tilo                  0.707   dac_c1_mux0000<8>224
+                                                       dac_c1_mux0000<8>170
+    SLICE_X14Y13.F3      net (fanout=1)        0.043   dac_c1_mux0000<8>170/O
+    SLICE_X14Y13.X       Tilo                  0.692   dac_c1_mux0000<8>224
+                                                       dac_c1_mux0000<8>224
+    SLICE_X12Y12.F1      net (fanout=1)        0.742   dac_c1_mux0000<8>224
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      6.097ns (3.424ns logic, 2.673ns route)
+                                                       (56.2% logic, 43.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.288ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_0 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.980ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_0 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.591   address<0>
+                                                       address_0
+    SLICE_X15Y13.F1      net (fanout=41)       2.450   address<0>
+    SLICE_X15Y13.X       Tilo                  0.643   dac_c1_mux0000<8>186
+                                                       dac_c1_mux0000<8>186
+    SLICE_X14Y13.F4      net (fanout=1)        0.060   dac_c1_mux0000<8>186
+    SLICE_X14Y13.X       Tilo                  0.692   dac_c1_mux0000<8>224
+                                                       dac_c1_mux0000<8>224
+    SLICE_X12Y12.F1      net (fanout=1)        0.742   dac_c1_mux0000<8>224
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.980ns (2.728ns logic, 3.252ns route)
+                                                       (45.6% logic, 54.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dac_c1_8 (SLICE_X12Y12.F2), 10 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.422ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_1 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.846ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_1 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.YQ      Tcko                  0.580   address<0>
+                                                       address_1
+    SLICE_X11Y17.F1      net (fanout=41)       1.933   address<1>
+    SLICE_X11Y17.X       Tilo                  0.643   dac_c1_mux0000<8>76
+                                                       dac_c1_mux0000<8>76
+    SLICE_X12Y15.F1      net (fanout=1)        0.845   dac_c1_mux0000<8>76
+    SLICE_X12Y15.X       Tilo                  0.692   dac_c1_mux0000<8>78
+                                                       dac_c1_mux0000<8>78
+    SLICE_X12Y12.F2      net (fanout=1)        0.351   dac_c1_mux0000<8>78
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.846ns (2.717ns logic, 3.129ns route)
+                                                       (46.5% logic, 53.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.630ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_0 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.638ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_0 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.591   address<0>
+                                                       address_0
+    SLICE_X12Y14.G2      net (fanout=41)       1.639   address<0>
+    SLICE_X12Y14.Y       Tilo                  0.707   N9
+                                                       dac_c1_mux0000<8>43_SW0
+    SLICE_X12Y15.G4      net (fanout=1)        0.106   N8
+    SLICE_X12Y15.Y       Tilo                  0.707   dac_c1_mux0000<8>78
+                                                       dac_c1_mux0000<8>43
+    SLICE_X12Y15.F3      net (fanout=1)        0.043   dac_c1_mux0000<8>43/O
+    SLICE_X12Y15.X       Tilo                  0.692   dac_c1_mux0000<8>78
+                                                       dac_c1_mux0000<8>78
+    SLICE_X12Y12.F2      net (fanout=1)        0.351   dac_c1_mux0000<8>78
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.638ns (3.499ns logic, 2.139ns route)
+                                                       (62.1% logic, 37.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.633ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_0 (FF)
+  Destination:          dac_c1_8 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.635ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.065ns (0.202 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_0 to dac_c1_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.591   address<0>
+                                                       address_0
+    SLICE_X12Y14.F2      net (fanout=41)       1.592   address<0>
+    SLICE_X12Y14.X       Tilo                  0.692   N9
+                                                       dac_c1_mux0000<8>43_SW1
+    SLICE_X12Y15.G1      net (fanout=1)        0.165   N9
+    SLICE_X12Y15.Y       Tilo                  0.707   dac_c1_mux0000<8>78
+                                                       dac_c1_mux0000<8>43
+    SLICE_X12Y15.F3      net (fanout=1)        0.043   dac_c1_mux0000<8>43/O
+    SLICE_X12Y15.X       Tilo                  0.692   dac_c1_mux0000<8>78
+                                                       dac_c1_mux0000<8>78
+    SLICE_X12Y12.F2      net (fanout=1)        0.351   dac_c1_mux0000<8>78
+    SLICE_X12Y12.CLK     Tfck                  0.802   dac_c1_8
+                                                       dac_c1_mux0000<8>251
+                                                       dac_c1_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.635ns (3.484ns logic, 2.151ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dac_c1_6 (SLICE_X10Y15.F2), 9 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.605ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_3 (FF)
+  Destination:          dac_c1_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.698ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.030ns (0.208 - 0.238)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_3 to dac_c1_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y19.XQ      Tcko                  0.631   address<3>
+                                                       address_3
+    SLICE_X8Y16.G4       net (fanout=41)       1.643   address<3>
+    SLICE_X8Y16.Y        Tilo                  0.707   N15
+                                                       dac_c1_mux0000<6>68
+    SLICE_X10Y16.F2      net (fanout=1)        0.484   dac_c1_mux0000<6>68
+    SLICE_X10Y16.X       Tilo                  0.692   dac_c1_mux0000<6>100
+                                                       dac_c1_mux0000<6>100
+    SLICE_X10Y15.F2      net (fanout=1)        0.739   dac_c1_mux0000<6>100
+    SLICE_X10Y15.CLK     Tfck                  0.802   dac_c1_6
+                                                       dac_c1_mux0000<6>258
+                                                       dac_c1_6
+    -------------------------------------------------  ---------------------------
+    Total                                      5.698ns (2.832ns logic, 2.866ns route)
+                                                       (49.7% logic, 50.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.828ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_1 (FF)
+  Destination:          dac_c1_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.446ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.059ns (0.208 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_1 to dac_c1_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.YQ      Tcko                  0.580   address<0>
+                                                       address_1
+    SLICE_X10Y16.G4      net (fanout=41)       1.866   address<1>
+    SLICE_X10Y16.Y       Tilo                  0.707   dac_c1_mux0000<6>100
+                                                       dac_c1_mux0000<6>30
+    SLICE_X10Y16.F4      net (fanout=1)        0.060   dac_c1_mux0000<6>30/O
+    SLICE_X10Y16.X       Tilo                  0.692   dac_c1_mux0000<6>100
+                                                       dac_c1_mux0000<6>100
+    SLICE_X10Y15.F2      net (fanout=1)        0.739   dac_c1_mux0000<6>100
+    SLICE_X10Y15.CLK     Tfck                  0.802   dac_c1_6
+                                                       dac_c1_mux0000<6>258
+                                                       dac_c1_6
+    -------------------------------------------------  ---------------------------
+    Total                                      5.446ns (2.781ns logic, 2.665ns route)
+                                                       (51.1% logic, 48.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.978ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_1 (FF)
+  Destination:          dac_c1_6 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.296ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.059ns (0.208 - 0.267)
+  Source Clock:         dac_clk2_OBUF falling at 41.666ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: address_1 to dac_c1_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.YQ      Tcko                  0.580   address<0>
+                                                       address_1
+    SLICE_X8Y16.G2       net (fanout=41)       1.292   address<1>
+    SLICE_X8Y16.Y        Tilo                  0.707   N15
+                                                       dac_c1_mux0000<6>68
+    SLICE_X10Y16.F2      net (fanout=1)        0.484   dac_c1_mux0000<6>68
+    SLICE_X10Y16.X       Tilo                  0.692   dac_c1_mux0000<6>100
+                                                       dac_c1_mux0000<6>100
+    SLICE_X10Y15.F2      net (fanout=1)        0.739   dac_c1_mux0000<6>100
+    SLICE_X10Y15.CLK     Tfck                  0.802   dac_c1_6
+                                                       dac_c1_mux0000<6>258
+                                                       dac_c1_6
+    -------------------------------------------------  ---------------------------
+    Total                                      5.296ns (2.781ns logic, 2.515ns route)
+                                                       (52.5% logic, 47.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "dac_clk2_OBUF1" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point address_0 (SLICE_X11Y22.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.983ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               address_0 (FF)
+  Destination:          address_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.983ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         dac_clk2_OBUF falling at 124.999ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: address_0 to address_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.473   address<0>
+                                                       address_0
+    SLICE_X11Y22.BX      net (fanout=41)       0.426   address<0>
+    SLICE_X11Y22.CLK     Tckdi       (-Th)    -0.084   address<0>
+                                                       address_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.983ns (0.557ns logic, 0.426ns route)
+                                                       (56.7% logic, 43.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point address_1 (SLICE_X11Y22.G1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.529ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               address_0 (FF)
+  Destination:          address_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.529ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         dac_clk2_OBUF falling at 124.999ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: address_0 to address_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y22.XQ      Tcko                  0.473   address<0>
+                                                       address_0
+    SLICE_X11Y22.G1      net (fanout=41)       0.586   address<0>
+    SLICE_X11Y22.CLK     Tckg        (-Th)    -0.470   address<0>
+                                                       Mcount_address_xor<1>11
+                                                       address_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.529ns (0.943ns logic, 0.586ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point address_3 (SLICE_X12Y19.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.621ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               address_3 (FF)
+  Destination:          address_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.621ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         dac_clk2_OBUF falling at 124.999ns
+  Destination Clock:    dac_clk2_OBUF falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: address_3 to address_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y19.XQ      Tcko                  0.505   address<3>
+                                                       address_3
+    SLICE_X12Y19.F1      net (fanout=41)       0.611   address<3>
+    SLICE_X12Y19.CLK     Tckf        (-Th)    -0.505   address<3>
+                                                       Mcount_address_xor<3>11
+                                                       address_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.621ns (1.010ns logic, 0.611ns route)
+                                                       (62.3% logic, 37.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "dac_clk2_OBUF1" PERIOD = 83.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 81.731ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.801ns (Tcl)
+  Physical resource: dac_c1_1/CLK
+  Logical resource: dac_c1_1/CK
+  Location pin: SLICE_X10Y22.CLK
+  Clock network: dac_clk2_OBUF
+--------------------------------------------------------------------------------
+Slack: 81.731ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.801ns (Tch)
+  Physical resource: dac_c1_1/CLK
+  Logical resource: dac_c1_1/CK
+  Location pin: SLICE_X10Y22.CLK
+  Clock network: dac_clk2_OBUF
+--------------------------------------------------------------------------------
+Slack: 81.731ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.801ns (Tcl)
+  Physical resource: dac_c1_6/CLK
+  Logical resource: dac_c1_6/CK
+  Location pin: SLICE_X10Y15.CLK
+  Clock network: dac_clk2_OBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |         |    6.439|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 225 paths, 0 nets, and 274 connections
+
+Design statistics:
+   Minimum period:   6.439ns{1}   (Maximum frequency: 155.304MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Oct 17 17:44:54 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 140 MB
+
+
+
